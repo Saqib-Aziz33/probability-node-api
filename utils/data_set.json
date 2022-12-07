@@ -1,18 +1,42 @@
 {
-  "Bronze": {
-    "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+  "bronze": {
+    "rewards": [
+      { "reward": "Bronze", "coins": 10 },
+      { "reward": "Bronze", "coins": 20 },
+      { "reward": "Bronze", "coins": 30 },
+      { "reward": "Bronze", "coins": 40 },
+      { "reward": "Bronze", "coins": 50 }
+    ],
     "chances": 100
   },
-  "Silver": {
-    "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+  "silver": {
+    "rewards": [
+      { "reward": "Silver", "coins": 10 },
+      { "reward": "Silver", "coins": 20 },
+      { "reward": "Silver", "coins": 30 },
+      { "reward": "Silver", "coins": 40 },
+      { "reward": "Silver", "coins": 50 }
+    ],
     "chances": 50
   },
-  "Gold": {
-    "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+  "gold": {
+    "rewards": [
+      { "reward": "Gold", "coins": 10 },
+      { "reward": "Gold", "coins": 20 },
+      { "reward": "Gold", "coins": 30 },
+      { "reward": "Gold", "coins": 40 },
+      { "reward": "Gold", "coins": 50 }
+    ],
     "chances": 20
   },
-  "Diamond": {
-    "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+  "diamond": {
+    "rewards": [
+      { "reward": "Diamond", "coins": 10 },
+      { "reward": "Diamond", "coins": 20 },
+      { "reward": "Diamond", "coins": 30 },
+      { "reward": "Diamond", "coins": 40 },
+      { "reward": "Diamond", "coins": 50 }
+    ],
     "chances": 10
   }
 }
