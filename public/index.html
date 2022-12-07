@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+
+    <header class="bg-light">
+        <div class="container d-flex p-2 justify-content-between align-content-center">
+            <h4>Probability</h4>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#random" class="text-dark text-decoration-none fw-bold">Random</a>
+                <a href="#increment" class="text-dark text-decoration-none fw-bold">Increment</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="my-5 container">
+        <h2>End Points</h2>
+        <ul>
+            <li><code>/reward/random</code> <br>
+                <span class="ps-2">selects a random reward based on chances of data item</span>
+            </li>
+            <li><code>/reward/Increment</code> <br>
+                <span class="ps-2">selects a random reward based on # of requests</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container my-5 py-5" id="random">
+        <h1>API</h1>
+        <h3><code>/reward/random</code></h3>
+    </div>
+
+    <div class="container my-5 py-5" id="increment">
+        <h3><code>/reward/increment</code></h3>
+    </div>
+
+    <div class="container my-5 py-5">
+        <h4 class="text-light">Data Set <span class="text-primary">Preview</span></h4>
+        <p class="text-muted">chances ranges between 0-100</p>
+        <pre class="text-warning">
+            <code>
+            {
+                "Bronze": {
+                "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+                "chances": 100
+                },
+                "Silver": {
+                "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+                "chances": 50
+                },
+                "Gold": {
+                "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+                "chances": 20
+                },
+                "Diamond": {
+                "coins": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+                "chances": 10
+                }
+            }
+        </code>
+        </pre>
+    </div>
+    
+</body>
+</html>
