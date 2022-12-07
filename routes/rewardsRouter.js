@@ -22,19 +22,35 @@ router.get("/increment", (req, res) => {
     .json({ reward });
 });
 
-// router.get("/random", (req, res) => {
-//   let reward = { coins: 0, reward: "" };
-//   let data = [];
-//   // chances ranges between 1-100
-//   const random = Math.floor(Math.random() * 100);
-//   // select dataset
-//   if (random <= dataSet.Diamond.chances) {
-//   } else if (random <= dataSet.Gold.chances) {
-//   } else if (random <= dataSet.Silver.chances) {
-//   } else {
-//   }
-//   // send responce
-//   res.json({ random });
-// });
+router.get("/random", (req, res) => {
+  let selectedData = [];
+  // chances ranges between 1-100
+  const random = Math.floor(Math.random() * 100);
+  // select data based on random number
+  if (random <= dataSet.diamond.chances) {
+    selectedData = [
+      ...dataSet.diamond.rewards,
+      ...dataSet.gold.rewards,
+      ...dataSet.silver.rewards,
+      ...dataSet.bronze.rewards,
+    ];
+  } else if (random <= dataSet.gold.chances) {
+    selectedData = [
+      ...dataSet.gold.rewards,
+      ...dataSet.silver.rewards,
+      ...dataSet.bronze.rewards,
+    ];
+  } else if (random <= dataSet.silver.chances) {
+    selectedData = [...dataSet.silver.rewards, ...dataSet.bronze.rewards];
+  } else {
+    selectedData = [...dataSet.bronze.rewards];
+  }
+
+  // select random reward from seleted data
+  const reward = selectedData[Math.floor(Math.random() * selectedData.length)];
+
+  // send responce
+  res.json({ reward });
+});
 
 module.exports = router;
