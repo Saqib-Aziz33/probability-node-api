@@ -27,7 +27,7 @@
       { "reward": "Gold", "coins": 40 },
       { "reward": "Gold", "coins": 50 }
     ],
-    "chances": 20
+    "chances": 10
   },
   "diamond": {
     "rewards": [
@@ -37,6 +37,6 @@
       { "reward": "Diamond", "coins": 40 },
       { "reward": "Diamond", "coins": 50 }
     ],
-    "chances": 10
+    "chances": 5
   }
 }
